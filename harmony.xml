@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- Device Parts -->
+    <project path="device/mediatek/harmony" name="LineageOS/android_device_mediatek_harmony" revision="hybris-15.1" />
+
+    <remove-project path="hybris/hybris-boot" name="mer-hybris/hybris-boot" />
+    <project path="hybris/hybris-boot" name="sailfish-harmony/hybris-boot" revision="master"/>
+
+    <!-- Modified LOS Kernel --> 
+    <project path="kernel/mediatek/mt6580" name="sailfish-harmony/android_kernel_mediatek_mt6580" revision="hybris-15.1" />
+
+    <!-- Vendor Blobs -->
+    <project path="vendor/mediatek/harmony" name="OpenWatchProject/android_vendor_mediatek_harmony" revision="lineage-15.1" />
+	
+    <!-- Patched to add legacy mtk bt support -->
+    <remove-project path="frameworks/base" name="LineageOS/android_frameworks_base" />
+    <project path="frameworks/base" name="sailfishos-harmony/android_frameworks_base" revision="hybris-15.1" />
+    <remove-project path="system/bt" name="LineageOS/android_system_bt" />
+    <project path="system/bt" name="sailfishos-harmony/android_system_bt" revision="hybris-15.1" />
+    <remove-project path="hardware/interfaces" name="LineageOS/android_hardware_interfaces" />
+    <project path="hardware/interfaces" name="sailfishos-harmony/android_hardware_interfaces" revision="hybris-15.1" />>
+
+    <!-- Patched to add back atomic symbols -->
+    <remove-project path="system/core" name="LineageOS/android_system_core" />
+    <project path="system/core" name="sailfishos-harmony/android_system_core" revision="hybris-15.1" />
+
+    <!-- RPM stuff -->
+    <project path="rpm/" name="sailfish-harmony/droid-hal-harmony" revision="hybris-15.1" />
+    <project path="hybris/droid-configs" name="sailfish-harmony/droid-config-harmony" revision="hybris-15.1" />
+    <project path="hybris/droid-hal-version-harmony" name="sailfish-harmony/droid-hal-version-harmony" revision="hybris-15.1" />
+</manifest>
